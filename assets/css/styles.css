@@ -21,10 +21,11 @@ header {
   align-items: center;
   min-height: 105px;
   background-color: #eee;
+  padding: 10px 0;
 }
 
 .spacer {
-  height: 100px;
+  height: 120px;
 }
 
 .logo > img {
@@ -76,21 +77,29 @@ form {
   font-size: 1em;
   padding-top: 3px;
   padding-bottom: 3px;
+  border: none;
 }
+
 
 /*Feature List*/
 .feature-list {
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: flex-start; ;
+  max-width: 900px;
 }
 
-.vector {
+#fire, #truck, #battery {
   display: none;
+  width: 60px;
+  margin-left: 5%;
 }
+
 
 .feature-item {
-  margin: 50px 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 5%;
   text-align: center;
 }
 
@@ -111,10 +120,6 @@ iframe {
   flex-direction: column;
   align-items: center;
 
-}
-
-.pricing-item:last-of-type {
-  margin-bottom: 40px;
 }
 
 .pricing-item {
@@ -190,7 +195,53 @@ footer > span {
 }
 
 /* Add Breakpoints Here */
-
-
 /* Apply to certain size and above */
 
+@media only screen and (min-width:554px) {
+  #fire, #truck, #battery {
+    display: block;
+  }
+
+  .feature-item {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  header {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .logo {
+    width: 70vw;
+  }
+  
+  nav > ul {
+    width: 35vw;
+  }
+}
+
+@media only screen and (min-width: 610px) {
+  nav > ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 799px;) {
+  .pricing-item:last-of-type {
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .pricing {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .pricing-item {
+    margin: 5px 5px;
+  }
+}
